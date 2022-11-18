@@ -1,7 +1,5 @@
 from os import path
 import numpy as np
-from models.attr_classifier import BinaryAttributeClassifier
-from models.attr_classifier import FairBinaryAttributeClassifier
 import pickle
 import utils.func_utils as ut
 import utils.parse_experiment_args as parse_experiment_args
@@ -11,6 +9,9 @@ from sklearn.metrics import average_precision_score
 from sklearn.metrics import accuracy_score
 import random
 import logging
+
+from models.attr_classifier import BinaryAttributeClassifier
+from models.attr_classifier import FairBinaryAttributeClassifier
 
 
 def main(experiment_configs):

@@ -4,7 +4,7 @@ from PIL import Image
 import torch
 import numpy as np
 import os
-import func_utils as ut
+import utils.func_utils as ut
 from zipfile import ZipFile
 import logging
 from sklearn.model_selection import StratifiedShuffleSplit

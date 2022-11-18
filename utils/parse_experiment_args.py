@@ -1,5 +1,5 @@
 import argparse
-import utils
+from utils import func_utils
 from utils import load_data
 import torch
 
@@ -55,7 +55,7 @@ def parse_arguments():
 
     # saving directories
     if exp_configs['pretrained_on'] > -1:
-        save_folder = utils.get_model_path(dataset=exp_configs['dataset'],
+        save_folder = func_utils.get_model_path(dataset=exp_configs['dataset'],
                                            protected_attribute=attr_list[exp_configs['protected_attribute']],
                                            target_attribute=attr_list[exp_configs['attribute']],
                                            model_name=exp_configs['model'],
@@ -73,7 +73,7 @@ def parse_arguments():
             'learning_rate': exp_configs['backbone_lr'],
             'stratified': exp_configs['backbone_stratified']
         }
-        pretrained_model_folder = utils.get_model_path(dataset=exp_configs['dataset'],
+        pretrained_model_folder = func_utils.get_model_path(dataset=exp_configs['dataset'],
                                                        protected_attribute=attr_list[exp_configs['protected_attribute']],
                                                        target_attribute=attr_list[exp_configs['pretrained_on']],
                                                        model_name=exp_configs['model'],
@@ -85,7 +85,7 @@ def parse_arguments():
                                                        pretrained_on='imagenet')
         exp_configs['pretrained_folder'] = pretrained_model_folder + '/'
     else:
-        save_folder = utils.get_model_path(dataset=exp_configs['dataset'],
+        save_folder = func_utils.get_model_path(dataset=exp_configs['dataset'],
                                            protected_attribute=attr_list[exp_configs['protected_attribute']],
                                            target_attribute=attr_list[exp_configs['attribute']],
                                            model_name=exp_configs['model'],
@@ -98,7 +98,7 @@ def parse_arguments():
                                            pretrained_on='imagenet')
         exp_configs['pretrained_folder'] = None
 
-    utils.make_dir(save_folder)
+    func_utils.make_dir(save_folder)
     exp_configs['save_folder'] = save_folder + '/'
 
     params_train = {'batch_size': exp_configs['batch_size'],
