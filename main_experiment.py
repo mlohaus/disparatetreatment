@@ -13,7 +13,6 @@ import logging
 from models.attr_classifier import BinaryAttributeClassifier
 from models.attr_classifier import FairBinaryAttributeClassifier
 
-
 def main(experiment_configs):
     logging.basicConfig(filename=experiment_configs['save_folder'] + 'logging.log', filemode='w', level=logging.DEBUG)
     logging.getLogger().addHandler(logging.StreamHandler())
