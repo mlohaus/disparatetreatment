@@ -33,7 +33,7 @@ If you use this software or want to refer to it, please cite the following publi
 ```
 @inproceedings{lohaus2022,
   title={Are Two Heads the Same as One? Identifying Disparate Treatment in Fair Neural Networks},
-  author={Lohaus, Michael and Kleindessner, Matth{\"a}us and Kenthapadi, Krishnaram and Locatello, Francesco and Russell, Chris},
+  author={Lohaus, Michael and Kleindessner, Matth\"aus and Kenthapadi, Krishnaram and Locatello, Francesco and Russell, Chris},
   booktitle={Neural Information Processing Systems (NeurIPS)},
   year={2022}
 }
